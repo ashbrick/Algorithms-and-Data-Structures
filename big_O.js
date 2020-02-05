@@ -39,7 +39,11 @@ let time1 = performance.now();
 addUntil(1000000000);
 let time2 = performance.now();
 console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds`)
+// Time Elapsed: 0.000003360999748110771 seconds 
 
+/* 
+Which is the best solution for speed of execution, A or B?
+Solution B is faster, however different machines will run the code at different speeds. So, this may not be the most precise way to determine which one is better.
+*/
 
-// Which is the best solution for speed of execution, A or B?
 
