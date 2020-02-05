@@ -21,9 +21,10 @@ console.log(addUpTo(10));
 const {performance} = 
 require('perf_hooks');
 let t1 = performance.now(); 
-addUpTo();
+addUpTo(1000000000);
 let t2 = performance.now();
-console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`)
+console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds`)
+// Time Elapsed: 0.9893219910003245 seconds
 
 
 // Solution B: using math and no loop
@@ -32,6 +33,13 @@ function addUntil(n){
 }
 // 4 * (4 + 1) / 2
 console.log(addUntil(4));
+
+// timing solution B
+let time1 = performance.now(); 
+addUntil(1000000000);
+let time2 = performance.now();
+console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds`)
+
 
 // Which is the best solution for speed of execution, A or B?
 
