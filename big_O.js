@@ -17,9 +17,21 @@ function addUpTo(n) {
 
 console.log(addUpTo(10));
 
+// timing solution A
+const {performance} = 
+require('perf_hooks');
+let t1 = performance.now(); 
+addUpTo();
+let t2 = performance.now();
+console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`)
+
+
 // Solution B: using math and no loop
 function addUntil(n){
     return n * (n + 1)  / 2;
 }
 // 4 * (4 + 1) / 2
 console.log(addUntil(4));
+
+// Which is the best solution for speed of execution, A or B?
+
